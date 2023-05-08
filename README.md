@@ -4,7 +4,9 @@
 
 1. Фреймворк - Selenium
 2. Браузер - Firefox
-3. Запуск всех тестов: pytest -v tests 
+3. Запуск всех тестов: pytest -v tests
+4. Сгенерировать Allure-отчёт: pytest tests --alluredir=allure_results 
+5. Сформировать отчёт в формате веб: allure serve allure_results 
 
 ## Сценарии, покрытые тавтотестами:
 * test_base_page.py - Основные переходы по логотипам со страниц
