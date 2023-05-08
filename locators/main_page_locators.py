@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+
 class MainPageLocators:
     HEADER_TEXT = By.XPATH, \
         "//div[contains(@class, 'Home_Header')]"  # Заголовок на главной странице

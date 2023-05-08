@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class OrderPageLocators:
     NAME_FIELD = By.XPATH, "//input[@placeholder='* Имя']"  # Поле ввода имени
     LAST_NAME_FIELD = By.XPATH, "//input[@placeholder='* Фамилия']"  # Поле ввода фамилии

@@ -1,6 +1,5 @@
 import allure
 import pytest
-
 from pages.base_page import BasePage
 from pages.main_page import MainPage
 from pages.order_page import OrderPage
@@ -14,6 +13,7 @@ class TestOrderButton:
     @allure.description('Корректное заполнение всех полей заказа,'
                         ' после подтверждения отображается {TextData.SUCCESSFUL_ORDER_TEXT}')
     def test_order_button_on_header_passed(self, driver, get_phone_number, get_date_today):
+
         page = BasePage(driver)
         page.open_page(DataUrls.MAIN_PAGE)
         click_order_button = MainPage(driver)
@@ -33,6 +33,7 @@ class TestOrderButton:
     @allure.description('Корректное заполнение всех полей заказа,'
                         ' после подтверждения отображается {TextData.SUCCESSFUL_ORDER_TEXT}')
     def test_order_page_correct_user_data_passed(self, driver, get_phone_number, get_date_tomorrow):
+
         page = BasePage(driver)
         page.open_page(DataUrls.MAIN_PAGE)
         click_order_button = MainPage(driver)
@@ -51,6 +52,7 @@ class TestOrderButton:
     @allure.title('Оформление заказа с некорректными данными по кнопке "Заказать" на главной странице')
     @allure.description('Некорректное Имя пользователя')
     def test_order_page_first_name_incorrect_show_error_message_failed(self, driver, get_phone_number):
+
         page = BasePage(driver)
         page.open_page(DataUrls.MAIN_PAGE)
         click_order_button = MainPage(driver)
@@ -64,6 +66,7 @@ class TestOrderButton:
     @allure.title('Оформление заказа с некорректными данными по кнопке "Заказать" на главной странице')
     @allure.description('Некорректная Фамилия пользователя')
     def test_order_page_last_name_incorrect_show_error_message_failed(self, driver, get_phone_number):
+
         page = BasePage(driver)
         page.open_page(DataUrls.MAIN_PAGE)
         click_order_button = MainPage(driver)
@@ -77,6 +80,7 @@ class TestOrderButton:
     @allure.title('Оформление заказа с некорректными данными по кнопке "Заказать" на главной странице')
     @allure.description('Некорректный адрес пользователя')
     def test_order_page_address_incorrect_show_error_message_failed(self, driver, get_phone_number):
+
         page = BasePage(driver)
         page.open_page(DataUrls.MAIN_PAGE)
         click_order_button = MainPage(driver)
@@ -90,6 +94,7 @@ class TestOrderButton:
     @allure.title('Оформление заказа с некорректными данными по кнопке "Заказать" на главной странице')
     @allure.description('Некорректный номер телефона пользователя')
     def test_order_page_phone_number_incorrect_show_error_message_failed(self, driver, get_incorrect_phone_number):
+
         page = BasePage(driver)
         page.open_page(DataUrls.MAIN_PAGE)
         click_order_button = MainPage(driver)

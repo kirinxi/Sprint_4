@@ -33,11 +33,9 @@ class MainPage:
     @allure.step('Нажать на кнопку "Заказать" внизу главной страницы')
     def click_order_button(self):
         self.driver.find_element(*MainPageLocators.ORDER_BUTTON_MAIN_PAGE).click()
-
     @allure.step('Получить текст заголовка главной страницы')
     def get_main_header_text(self):
         return self.driver.find_element(*MainPageLocators.HEADER_TEXT).text
-
     @allure.step('Нажать на кнопку "Заказать" в шапке главной страницы')
     def click_order_button_in_header(self):
         self.driver.find_element(*MainPageLocators.ORDER_BUTTON_IN_HEADER).click()

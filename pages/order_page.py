@@ -7,7 +7,6 @@ from selenium.webdriver.common.keys import Keys
 class OrderPage:
     def __init__(self, driver):
         self.driver = driver
-
     def set_first_name(self, firstname):
         self.driver.find_element(*OrderPageLocators.NAME_FIELD).send_keys(firstname)
 
@@ -39,10 +38,8 @@ class OrderPage:
         self.set_subway_station(consumer.get("subway_station"))
         self.set_phone_number(number)
         self.click_next_button()
-
     def wait_for_rent_form(self):
         WebDriverWait(self.driver, 10).until(exp_cond.visibility_of_element_located(OrderPageLocators.RENT_FORM))
-
     def set_date(self, date):
         self.driver.find_element(*OrderPageLocators.DATE_FIELD).send_keys(date)
         WebDriverWait(self.driver, 10).until(exp_cond.visibility_of_element_located(OrderPageLocators.CALENDAR))
