@@ -9,6 +9,7 @@ from data.data import ConsumerData
 
 @pytest.mark.usefixtures("driver", "get_phone_number", "get_date_today", "get_date_tomorrow")
 class TestOrderButton:
+
     @allure.title('Оформление заказа по кнопке "Заказать" в шапке страницы')
     @allure.description('Корректное заполнение всех полей заказа,'
                         ' после подтверждения отображается {TextData.SUCCESSFUL_ORDER_TEXT}')

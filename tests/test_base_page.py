@@ -7,6 +7,7 @@ from data.data import TextData
 
 @pytest.mark.usefixtures("driver")
 class TestLogo:
+
     @allure.title('Открытие сайта Самоката по логотипу "Самокат"')
     @allure.description('На странице заказа нажать на логотип "Самокат", выполнен переход на главную страницу Самоката')
     def test_main_page_open_by_scooter_logo_passed(self, driver):
